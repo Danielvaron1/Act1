@@ -2,7 +2,6 @@ import React, {useContext} from 'react';
 import '../styles/styles.css';
 import {Product} from "../components/Product";
 import {AppContext} from "../context/AppContext";
-import {LinearProgress} from "@mui/material";
 import Spinner from 'react-bootstrap/Spinner';
 
 export const Overview = () => {

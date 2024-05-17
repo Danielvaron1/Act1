@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/UserProfile.css';
 
-const UserProfile = ({ user }) => {
+const UserProfile = ({}) => {
     return (
         <div className="user-profile">
             <img src={require("../Imagenes/images.png")} className="profile-picture" />

@@ -1,6 +1,6 @@
 // ProductDetails.js
 import React, { useContext } from 'react';
-import {Link, useParams} from 'react-router-dom';
+import {useParams} from 'react-router-dom';
 import {AppContext} from '../context/AppContext';
 import Button from "react-bootstrap/Button";
 import {useCart} from "../context/CartContext";
