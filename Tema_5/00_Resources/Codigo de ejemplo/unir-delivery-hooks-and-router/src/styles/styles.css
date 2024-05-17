@@ -3,6 +3,9 @@ body {
     background-color: #1a1a1a;
     color: #fff;
     font-family: 'Arial', sans-serif;
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 40px;
 }
 
 .card {
@@ -14,26 +17,69 @@ body {
     color: #f0e68c;
 }
 
-.restaurant-container {
+.product-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
 
-.restaurant-container > * {
+.product-container > * {
     flex: 1 1 40%; /* Esto hará que los elementos ocupen aproximadamente el 40% del ancho del contenedor, pero se ajustarán para evitar el desbordamiento */
     max-width: 40%; /* Esto limitará el ancho de los elementos al 40% del contenedor */
     margin: 10px; /* Esto agregará un poco de espacio alrededor de los elementos */
+}
+
+.img-card{
+    max-height: 400px;
+    max-width: 400px;
+    border-radius: 8px;
+    justify-items: center;
+    text-align: center;
+    margin: auto;
+}
+
+.spinner{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+}
+
+.header{
+    padding: 0 !important;
+}
+
+.img-brand{
+    max-height: 90px;
+}
+
+.img-icon{
+    max-height: 40px;
+    margin-left: 30px;
+}
+
+.nav-brand{
+    color: white;
+    margin: 0;
+    text-decoration: none;
 }
 
 .header-footer {
     background-color: #222;
     padding: 10px;
     text-align: center;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .header-footer-text {
-    color: #f0e68c;
+    color: white;
 }
 
 .center-text {
@@ -90,8 +136,8 @@ body {
     }
 }
 
-/* RestaurantDetails.css */
-.restaurant-details {
+/* ProductDetails.css */
+.product-details {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -104,19 +150,26 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.restaurant-name {
+.product-name {
     font-size: 2em;
     font-weight: bold;
     color: #007bff;
     margin-bottom: 10px;
 }
 
-.restaurant-cuisine {
+.product-cuisine {
     font-size: 1.2em;
     margin-bottom: 10px;
 }
 
-.restaurant-rating {
+.product-rating {
     font-size: 1.2em;
     margin-bottom: 10px;
+}
+
+.card-button{
+    color: white;
+    text-decoration: none;
+    margin: auto;
+    text-align: center;
 }

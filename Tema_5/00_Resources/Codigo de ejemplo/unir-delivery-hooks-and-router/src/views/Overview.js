@@ -1,44 +1,39 @@
 import React, {useContext} from 'react';
 import '../styles/styles.css';
-import {Restaurant} from "../components/Restaurant";
-import {Header} from "../components/Header";
-import {Footer} from "../components/Footer";
-import {RestaurantContext} from "../context/RestaurantContext";
+import {Product} from "../components/Product";
+import {AppContext} from "../context/AppContext";
 import {LinearProgress} from "@mui/material";
+import Spinner from 'react-bootstrap/Spinner';
 
 export const Overview = () => {
 
-    const { restaurants } = useContext(RestaurantContext);
-
+    const { products } = useContext(AppContext);
+    console.log(products);
     return (
         <div>
-            <h2 className="center-text">Restaurantes Disponibles</h2>
-            <div className="restaurant-container">
+            <div className="product-container">
 
                 {
-                    /**
-                     * Por cada restaurante conocido
-                     * Se crea un Restaurant con la informacion del restaurante
-                     *
-                     * Si los datos aun no se han recogido (lista de size 0) del back-end, se muestra un Spinner.
-                     */
-                    restaurants.length > 0 ? (
-                        restaurants.map((restaurant, index) => (
-                            <Restaurant
+                    products.length > 0 ? (
+                        products.map((product, index) => (
+                            <Product
                                 key={index}
-                                id={restaurant.id}
-                                name={restaurant.name}
-                                cuisine={restaurant.cuisine}
-                                rating={restaurant.rating}
+                                id={product.id}
+                                url={product.url}
+                                name={product.name}
+                                desc={product.desc}
+                                price={product.price}
+                                prod={product}
                             />
                         ))
                     ) : (
-                        <LinearProgress color="secondary"/>
+                        <div className="spinner">
+                            <Spinner  animation="grow" variant="dark" />
+                        </div>
                     )
                 }
-
-                {}
             </div>
         </div>
     );
+
 }
